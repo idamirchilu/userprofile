@@ -29,6 +29,8 @@ export default function PersonalProfile() {
       });
   }, []);
 
+  console.log(userData.avatar);
+
   return (
     <div className={classes.main}>
       <PersonalCard>
@@ -37,7 +39,7 @@ export default function PersonalProfile() {
             <div className={classes.avatar}>
               <img
                 style={{ margin: "1rem" }}
-                src={userData.avatar && avatar}
+                src={!!userData.avatar ? userData.avatar : avatar}
                 alt="avatar"
                 width="250px"
                 height="250px"
@@ -46,6 +48,7 @@ export default function PersonalProfile() {
             <div className={classes["field-one"]}>
               <h2>Frist Name: {userData.first_name}</h2>
               <h2>Last Name: {userData.last_name}</h2>
+              <h2>Email: {userData.email}</h2>
               <h2>Gender: </h2>
               <div className={classes.radio}>
                 <input type="radio" value="MALE" name="gender" id="male" />
@@ -56,10 +59,10 @@ export default function PersonalProfile() {
                 <label htmlFor="prefer">Prefer Not To Answer</label>
               </div>
               <h2>Cell Phone: none</h2>
-              <h2>Telephone: none</h2>
-              <h2>Postal code: none</h2>
             </div>
             <div className={classes["field-two"]}>
+              <h2>Telephone: none</h2>
+              <h2>Postal code: none</h2>
               <h2>Country: none</h2>
               <h2>Town: none</h2>
               <h2>Full Address: none</h2>

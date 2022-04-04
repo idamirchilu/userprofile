@@ -37,7 +37,7 @@ export default function PublicProfile() {
             <div className={classes.avatar}>
               <img
                 style={{ margin: "1rem" }}
-                src={userData.avatar && avatar}
+                src={!!userData.avatar ? userData.avatar : avatar}
                 alt="avatar"
                 width="250px"
                 height="250px"
@@ -46,6 +46,7 @@ export default function PublicProfile() {
             <div className={classes["field-one"]}>
               <h2>Frist Name: {userData.first_name}</h2>
               <h2>Last Name: {userData.last_name}</h2>
+              <h2>Email: {userData.email}</h2>
               <h2>Gender: </h2>
               <div className={classes.radio}>
                 <input type="radio" value="MALE" name="gender" id="male" />

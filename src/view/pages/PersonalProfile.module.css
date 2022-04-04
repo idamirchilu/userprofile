@@ -43,13 +43,14 @@
 .field-two {
   /* background-color: darkgoldenrod; */
   margin-right: 15.3rem;
+  height: 25vh;
 }
 /* .field-three {
    background-color: darkslateblue; 
 } */
 .field-four {
   /* background-color: sienna; */
-  margin-right: 7%;
+  margin-left: 25%;
 }
 
 .btn-container {
